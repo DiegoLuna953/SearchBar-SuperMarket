@@ -11,11 +11,13 @@ export default function App () {
   useEffect(() => {
     if (search === '') {
       setFilteredProducts(products);
+      console.log("A");
     } else {
       const filtered = products.filter(product =>
         product.name.toLowerCase().includes(search.toLowerCase())
       );
       setFilteredProducts(filtered);
+      //console.log(filtered);
     }
   }, [search]);
 
@@ -24,15 +26,17 @@ export default function App () {
       <SearchBar value={search} onChangeText={(text) => setSearch(text)} />
 
       <ProductList products={filteredProducts} />
+      
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    display: 'flex',
     backgroundColor: '#FBF3D5',
     paddingTop: 100,
-    alignItems: 'center'
+    alignItems: 'center',
+    borderStyle: 'dashed'
   }
 })

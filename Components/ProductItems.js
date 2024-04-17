@@ -1,12 +1,15 @@
 import React from "react";
 import { View,Text,StyleSheet } from "react-native";
 
+import ProductList from "./ProductList";
+
 const ProductsItem = ({product}) => {
+    console.log(product);
     return(
         <View style={styles.container}>
-            <Text style={styles.textProductTittle}>Nombre del Producto: ${product.name}</Text>
-            <Text style={styles.textProductPrice}>Precio: ${product.price}</Text>
-            <Text style={styles.textProductDescription}>Descripcion: ${product.description}</Text>
+            <Text style={styles.textProductTittle}>Nombre del Producto: {product.name}</Text>
+            <Text style={styles.textProductPrice}>Precio: {product.price}</Text>
+            <Text style={styles.textProductDescription}>Descripcion: {product.description}</Text>
         </View>
     )
 }
@@ -20,8 +23,7 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     textProductTittle:{
-        fontSize: 20,
-        fontFamily: 'bold'
+        fontSize: 20
     },
     textProductPrice:{
         fontSize: 16

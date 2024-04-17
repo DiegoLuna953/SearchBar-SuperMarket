@@ -13,7 +13,7 @@ const products = [
     },
     {
         id: 3,
-        name: 'Atub',
+        name: 'Atun',
         price: 19.0,
         description: 'Atun en lata',
     },
